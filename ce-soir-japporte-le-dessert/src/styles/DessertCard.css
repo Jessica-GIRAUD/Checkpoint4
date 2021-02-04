@@ -15,14 +15,14 @@
 }
 
 .container:hover {
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px #61507f;
 }
 
 .dessert-image{
   width: 350px;
   height: 250px;
   border-radius: 5px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px #61507f;
 }
 
 .dessert-name{
@@ -46,9 +46,9 @@ text-align: center;
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     border-radius: 5px;
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 10px #61507f;
     width: 40%;
     margin: 2%;
   }
