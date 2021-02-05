@@ -20,14 +20,14 @@ function DessertCard() {
 
   const getDifficulty = (difficulty) => {
     switch (difficulty) {
-      case "très facile":
-        return <img src={macaX1} alt="très facile" />;
-      case "facile":
-        return <img src={macaX2} alt="facile" />;
-      case "moyen":
-        return <img src={macaX3} alt="moyen" />;
-      case "difficile":
-        return <img src={macaX4} alt="difficile" />;
+      case "Très facile":
+        return <img src={macaX1} alt="très facile" className="macaron"/>;
+      case "Facile":
+        return <img src={macaX2} alt="facile" className="macaron"/>;
+      case "Moyen":
+        return <img src={macaX3} alt="moyen" className="macaron"/>;
+      case "Difficile":
+        return <img src={macaX4} alt="difficile" className="macaron"/>;
       default:
         return "";
     }
