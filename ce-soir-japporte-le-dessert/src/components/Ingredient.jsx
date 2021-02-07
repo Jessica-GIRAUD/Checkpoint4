@@ -1,6 +1,5 @@
 function Ingredient({ingredients}) {
 
-
   return (
   <div className="large-ingredient-container">
     {ingredients.map(ingredient => (

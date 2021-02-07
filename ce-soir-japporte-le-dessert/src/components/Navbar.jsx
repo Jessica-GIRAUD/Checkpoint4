@@ -26,10 +26,27 @@ function NavBar() {
           <h2>Desserts</h2>
         </Link>
         <Link to="/ingredients" style={{textDecoration: "none"}} >
-          <h2>Ingredients</h2>
+          <h2>Ingrédients</h2>
+        </Link>
+        <Link to="/search" style={{textDecoration: "none"}} >
+          <h2><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#fff0e1"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="search"
+      >
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg></h2>
         </Link>
         <Link to="/random" style={{textDecoration: "none"}} >
-          <h2>Random</h2>
+          <h2>Au Pif ?</h2>
         </Link>
       </div>
 
@@ -41,8 +58,11 @@ function NavBar() {
           <a id="about" className="menu-item" href="/ingredients">
             Ingrédients
           </a>
-          <a id="contact" className="menu-item" href="/Recherche">
+          <a id="contact" className="menu-item" href="/search">
             Recherche
+          </a>
+          <a id="contact" className="menu-item" href="/random">
+            Au Pif ?
           </a>
         </Menu>
       </div>
