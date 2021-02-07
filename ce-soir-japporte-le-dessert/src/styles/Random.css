@@ -52,7 +52,13 @@
   margin-right: 10%;
 }
 
-
 .chronos-random {
   width: 35%;
 }
+
+@media (max-width: 768px) {
+  .dessert-image-random{
+    width: 100%;
+    height: 120px;
+  }
+  }
