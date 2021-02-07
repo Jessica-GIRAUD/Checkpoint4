@@ -5,7 +5,7 @@ function Ingredient({ingredients}) {
   <div className="large-ingredient-container">
     {ingredients.map(ingredient => (
       <div className="ingredient-container">
-        <h2>{ingredient.name}</h2>
+        <h3>{ingredient.name}</h3>
         <img src={ingredient.photo} alt={ingredient.name} className="ingredient-image"/>
       </div>
     ))}

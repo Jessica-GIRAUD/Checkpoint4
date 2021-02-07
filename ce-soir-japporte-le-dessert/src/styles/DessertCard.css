@@ -25,19 +25,52 @@
   box-shadow: 0 0 10px #61507f;
 }
 
-.dessert-name{
+.dessert-name, .time-needed{
 text-align: center;
+color: #61507f;
+}
+
+.difficulty-name{
+  width: 100px;
+  color: #61507f;
 }
 
 .information-dessert{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 5% 10%;
 }
 
-.macaron {
-  width: 15%;
+.time-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.difficulty-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.macaron1 {
+  width: 35%;
+}
+
+.macaron2 {
+  width: 75%;
+}
+
+.macaron3 {
+  width: 85%;
+}
+
+.macaron4 {
+  width: 95%;
+}
+
+.chronos {
+  width: 35%;
 }
 
 @media (max-width: 768px) {
@@ -65,11 +98,30 @@ text-align: center;
   .information-dessert{
     display: flex;
     flex-direction: column;
-    padding: 5% 10%;
   }
 
   .difficulty, .time-needed{
     margin: 10%;
   }
 
+  .difficulty-container, .time-container{
+    text-align: center;
+    margin: 10% 0;
+  }
+
+
+.difficulty-name, .time-needed{
+  margin: auto;
+  color: #61507f;
+}
+
+.chronos {
+  width: 60%;
+}
+
+.dessert-name-container{
+  justify-content: center;
+  display: flex;
+  height: 75px;
+}
 }
