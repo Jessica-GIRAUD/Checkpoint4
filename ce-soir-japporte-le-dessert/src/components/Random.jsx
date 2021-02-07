@@ -15,7 +15,7 @@ function Random() {
     return Math.floor(Math.random() * (max - min) + min);
   };
 
-  const random = getRandomArbitrary(0, 15);
+  const random = getRandomArbitrary(1, 15);
 
   // Retrieve random dessert from database
   useEffect(() => {
