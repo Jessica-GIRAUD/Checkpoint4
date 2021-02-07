@@ -57,7 +57,7 @@ function DessertCard() {
               <div className="difficulty-name">{dessert.difficulty_name}</div>
             </div>
             <div className="time-container">
-              <div>
+              <div className="chronos-image-container">
                 <img src={imgChronos} alt="chronos" className="chronos" />
               </div>
               <div className="time-needed">{dessert.time_needed}</div>
