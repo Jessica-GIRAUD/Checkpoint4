@@ -22,7 +22,7 @@ function Random() {
       .get(`http://localhost:5000/dessert/${random}`)
       .then((res) => res.data)
       .then((dessert) => setDessert(dessert));
-  }, []);
+  }, [random]);
   
   const getDifficulty = (difficulty) => {
     switch (difficulty) {
