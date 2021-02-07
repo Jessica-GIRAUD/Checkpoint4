@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import DessertCard from "./DessertCard";
 
 function Search() {
   const [desserts, setDesserts] = useState([]);
@@ -13,9 +12,10 @@ function Search() {
       .then((data) => setDesserts(data));
   }, []);
 
+
   return (
     <div>
-      <DessertCard desserts={desserts} />
+     Moteur de recherche
     </div>
   );
 }

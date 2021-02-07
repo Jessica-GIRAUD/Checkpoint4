@@ -92,7 +92,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position:static !important;
 }
 
-a {
+.bm-item-list a {
   color: #fff0e1;
   padding: 2% 0;
   outline:0

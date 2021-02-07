@@ -6,6 +6,7 @@ import macaX2 from "../img/MacaX2.png";
 import macaX3 from "../img/MacaX3.png";
 import macaX4 from "../img/MacaX4.png";
 import imgChronos from "../img/Chrono.png";
+import "../styles/Random.css";
 
 function Random() {
   const [dessert, setDessert] = useState([]);
@@ -27,22 +28,24 @@ function Random() {
   const getDifficulty = (difficulty) => {
     switch (difficulty) {
       case "Très facile":
-        return <img src={macaX1} alt="très facile" className="macaron1" />;
+        return <img src={macaX1} alt="très facile" className="macaron1-random " />;
       case "Facile":
-        return <img src={macaX2} alt="facile" className="macaron2" />;
+        return <img src={macaX2} alt="facile" className="macaron2-random " />;
       case "Moyen":
-        return <img src={macaX3} alt="moyen" className="macaron3" />;
+        return <img src={macaX3} alt="moyen" className="macaron3-random " />;
       case "Difficile":
-        return <img src={macaX4} alt="difficile" className="macaron4" />;
+        return <img src={macaX4} alt="difficile" className="macaron4-random " />;
       default:
         return "";
     }
   };
 
   return (
-    <div className="page-container">
+    <div>
+    <h2 className="dessert-name"> Au pif !</h2>
+        <div className="page-container-random">
       {dessert.map((dessert) => (
-        <div className="container">
+        <div className="container-random">
           <Link
             to={`/receipe/${dessert.id}`}
             style={{ textDecoration: "none" }}
@@ -50,26 +53,25 @@ function Random() {
             <img
               src={dessert.photo}
               alt={dessert.name}
-              className="dessert-image"
+              className="dessert-image-random"
             />
           </Link>
           <div className="dessert-name-container">
             <h2 className="dessert-name">{dessert.name}</h2>
           </div>
           <div className="information-dessert">
-            <div className="difficulty-container">
-              <div>{getDifficulty(dessert.difficulty_name)}</div>
-              <div className="difficulty-name">{dessert.difficulty_name}</div>
+            <div className="difficulty-container-random">
+              {getDifficulty(dessert.difficulty_name)}
+              {dessert.difficulty_name}
             </div>
-            <div className="time-container">
-              <div className="chronos-image-container">
-                <img src={imgChronos} alt="chronos" className="chronos" />
-              </div>
-              <div className="time-needed">{dessert.time_needed}</div>
+            <div className="time-container-random">
+                <img src={imgChronos} alt="chronos" className="chronos-random" />
+              {dessert.time_needed}
             </div>
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

@@ -35,36 +35,39 @@ function DessertCard() {
   };
 
   return (
-    <div className="page-container">
-      {desserts.map((dessert) => (
-        <div className="container">
-          <Link
-            to={`/receipe/${dessert.id}`}
-            style={{ textDecoration: "none" }}
-          >
-            <img
-              src={dessert.photo}
-              alt={dessert.name}
-              className="dessert-image"
-            />
-          </Link>
-          <div className="dessert-name-container">
-            <h2 className="dessert-name">{dessert.name}</h2>
-          </div>
-          <div className="information-dessert">
-            <div className="difficulty-container">
-              <div>{getDifficulty(dessert.difficulty_name)}</div>
-              <div className="difficulty-name">{dessert.difficulty_name}</div>
+    <div>
+      <h2 className="dessert-name" >Les desserts</h2>
+      <div className="page-container">
+        {desserts.map((dessert) => (
+          <div className="container">
+            <Link
+              to={`/receipe/${dessert.id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <img
+                src={dessert.photo}
+                alt={dessert.name}
+                className="dessert-image"
+              />
+            </Link>
+            <div className="dessert-name-container">
+              <h2 className="dessert-name">{dessert.name}</h2>
             </div>
-            <div className="time-container">
-              <div className="chronos-image-container">
-                <img src={imgChronos} alt="chronos" className="chronos" />
+            <div className="information-dessert">
+              <div className="difficulty-container">
+                <div>{getDifficulty(dessert.difficulty_name)}</div>
+                <div className="difficulty-name">{dessert.difficulty_name}</div>
               </div>
-              <div className="time-needed">{dessert.time_needed}</div>
+              <div className="time-container">
+                <div className="chronos-image-container">
+                  <img src={imgChronos} alt="chronos" className="chronos" />
+                </div>
+                <div className="time-needed">{dessert.time_needed}</div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

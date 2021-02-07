@@ -14,6 +14,8 @@ function IngredientsList() {
   }, []);
 
   return (
+    <div>
+    <h2 className="dessert-name" >Les Ingrédients</h2>
     <div className="large-ingredient-container">
       {ingredients.map((ingredient) => (
         <div className="ingredient-container">
@@ -30,6 +32,7 @@ function IngredientsList() {
           </Link>
         </div>
       ))}
+    </div>
     </div>
   );
 }

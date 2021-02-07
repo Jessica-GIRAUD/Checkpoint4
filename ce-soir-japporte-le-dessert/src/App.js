@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/" component={DessertCard}></Route>
         <Route exact path="/receipe/:id" component={ReceipeCard}></Route>
         <Route exact path="/ingredients" component={IngredientsList}></Route>
-        <Route exact path="/search/byingredient" component={Search}></Route>
+        <Route exact path="/search" component={Search}></Route>
         <Route exact path="/random" component={Random}></Route>
       </Switch>
     </Router>
