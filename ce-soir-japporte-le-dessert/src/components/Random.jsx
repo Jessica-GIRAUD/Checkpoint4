@@ -59,7 +59,7 @@ function Random() {
           <div className="dessert-name-container">
             <h2 className="dessert-name">{dessert.name}</h2>
           </div>
-          <div className="information-dessert">
+          <div className="information-dessert-random">
             <div className="difficulty-container-random">
               {getDifficulty(dessert.difficulty_name)}
               {dessert.difficulty_name}
