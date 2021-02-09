@@ -72,7 +72,11 @@ function ReceipeCard() {
               {dessert.time_needed}
             </div>
           </div>
-          <Ingredient ingredients={ingredients} />
+          <div className="large-ingredient-container">
+            {ingredients.map((ingredient) => (
+              <Ingredient name={ingredient.name} photo={ingredient.photo} />
+            ))}
+          </div>
           <div className="receipe-container">
             <h2 className="receipe-name">La recette :</h2>
             {receipes.map((step) => (

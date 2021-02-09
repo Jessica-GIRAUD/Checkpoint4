@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
 import DessertCard from "./DessertCard";
+import "../styles/DessertCard.css";
 
-function SearchByIngredient() {
+function DessertsList() {
   const [desserts, setDesserts] = useState([]);
-
-  const search = useLocation().search;
-  const ingredient = new URLSearchParams(search).get("name");
 
   // Retrieve dessert from database
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/search/byingredient?name=${ingredient}`)
+      .get(`http://localhost:5000/dessert/all`)
       .then((res) => res.data)
       .then((data) => setDesserts(data));
-  }, [ingredient]);
+  }, []);
 
   return (
     <div>
-      <h2 className="dessert-name">{`Une petite envie de ${ingredient} ?`}</h2>
+      {" "}
+      <h2 className="dessert-name">Les desserts</h2>
       <div className="page-container">
         {desserts.map((dessert) => (
           <DessertCard
@@ -35,4 +33,4 @@ function SearchByIngredient() {
   );
 }
 
-export default SearchByIngredient;
+export default DessertsList;

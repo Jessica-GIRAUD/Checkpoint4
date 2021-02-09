@@ -74,6 +74,12 @@ p,
   border-radius: 50%;
 }
 
+.ingredient-image:hover {
+  width: 150px;
+  border-radius: 50%;
+  opacity: 70%;
+}
+
 .large-ingredient-container {
   display: flex;
   flex-wrap: wrap;
