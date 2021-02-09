@@ -18,7 +18,7 @@ function IngredientsList() {
     <h2 className="dessert-name" >Les Ingrédients</h2>
     <div className="large-ingredient-container">
       {ingredients.map((ingredient) => (
-        <div className="ingredient-container">
+        <div className="ingredient-container" key={ingredient.id}>
           <Link
             to={`/search/byingredient?name=${ingredient.name}`}
             style={{ textDecoration: "none" }}
