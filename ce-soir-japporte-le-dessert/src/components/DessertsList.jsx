@@ -14,13 +14,15 @@ function DessertsList() {
       .then((data) => setDesserts(data));
   }, []);
 
+  if(desserts === [] || null || undefined) return "Aucun dessert"
+  else
   return (
     <div>
-      {" "}
       <h2 className="dessert-name">Les desserts</h2>
       <div className="page-container">
         {desserts.map((dessert) => (
           <DessertCard
+            key={dessert.index}
             id={dessert.id}
             name={dessert.name}
             photo={dessert.photo}

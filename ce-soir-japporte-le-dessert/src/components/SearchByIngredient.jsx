@@ -17,22 +17,26 @@ function SearchByIngredient() {
       .then((data) => setDesserts(data));
   }, [ingredient]);
 
-  return (
-    <div>
-      <h2 className="dessert-name">{`Une petite envie de ${ingredient} ?`}</h2>
-      <div className="page-container">
-        {desserts.map((dessert) => (
-          <DessertCard
-            id={dessert.id}
-            name={dessert.name}
-            photo={dessert.photo}
-            difficulty_name={dessert.difficulty_name}
-            time_needed={dessert.time_needed}
-          />
-        ))}
+  if (desserts.length <= 0) return <h2 style={{textAlign:"center", margin:"5%"}}>{`Aucune recette disponible à base de ${ingredient}`}</h2>
+  else {
+    return (
+      <div>
+        <h2 className="dessert-name">{`Une petite envie de ${ingredient} ?`}</h2>
+        <div className="page-container">
+          {desserts.map((dessert) => (
+            <DessertCard
+              id={dessert.id}
+              name={dessert.name}
+              photo={dessert.photo}
+              difficulty_name={dessert.difficulty_name}
+              time_needed={dessert.time_needed}
+              key={dessert.index}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default SearchByIngredient;

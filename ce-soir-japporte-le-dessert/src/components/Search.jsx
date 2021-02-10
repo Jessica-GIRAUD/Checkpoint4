@@ -61,7 +61,13 @@ function Search() {
           onChange={handleChange}
           onKeyUp={handleEnter}
         />
-        <input type="image" className="search-button" src={LogoSearch} alt="macaron de recherche" onClick={searchDessert} />
+        <input
+          type="image"
+          className="search-button"
+          src={LogoSearch}
+          alt="macaron de recherche"
+          onClick={searchDessert}
+        />
       </div>
       <div className="page-container">
         {desserts.map((dessert) => (

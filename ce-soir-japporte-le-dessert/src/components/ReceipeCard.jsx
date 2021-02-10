@@ -74,7 +74,7 @@ function ReceipeCard() {
           </div>
           <div className="large-ingredient-container">
             {ingredients.map((ingredient) => (
-              <Ingredient name={ingredient.name} photo={ingredient.photo} />
+              <Ingredient name={ingredient.name} photo={ingredient.photo} key={ingredient.index}/>
             ))}
           </div>
           <div className="receipe-container">

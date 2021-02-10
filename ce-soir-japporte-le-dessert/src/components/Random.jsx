@@ -45,7 +45,7 @@ function Random() {
     <h2 className="dessert-name"> Au pif !</h2>
         <div className="page-container-random">
       {dessert.map((dessert) => (
-        <div className="container-random">
+        <div className="container-random" key={dessert.index}>
           <Link
             to={`/receipe/${dessert.id}`}
             style={{ textDecoration: "none" }}
